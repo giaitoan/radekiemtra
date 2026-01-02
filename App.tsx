@@ -158,14 +158,14 @@ const Footer: React.FC<{ visits: number; clicks: number }> = ({ visits, clicks }
     <p>
       Phát triển bởi:{' '}
       <a
-        href="https://www.facebook.com/vhh0106/"
+        href="https://www.facebook.com/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-indigo-600 hover:underline font-semibold"
       >
-        Vũ Hoàng Hiệp
+        Chương trình Giải toán
       </a>{' '}
-      | Zalo: 0348554851
+      | Zalo: noname
     </p>
     {(visits > 0 || clicks > 0) && (
       <p className="mt-2 text-slate-600 font-medium">
