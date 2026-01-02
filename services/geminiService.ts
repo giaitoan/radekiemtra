@@ -1,6 +1,14 @@
 import { GoogleGenAI } from "@google/genai";
 import type { ExamFormData } from '../types';
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Fix: Always use process.env.API_KEY directly and remove local storage key management logic.
+export const generateLessonPlan = async (
+  prompt: string, 
+  pdfPart?: { mimeType: string; data: string },
+  modelId: string = 'gemini-3-flash-preview'
+) => {
+  // Use the pre-configured API key from environment variables exclusively.
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    
 const createGeneralPrompt = (data: ExamFormData): string => {
     return `
 Bạn là một trợ lý AI chuyên gia cho giáo viên tiểu học, THCS, THPT Việt Nam, có chuyên môn sâu về môn ${data.subject}. Nhiệm vụ của bạn là tạo ra một bộ đề kiểm tra hoàn chỉnh, chính xác và khoa học, tuân thủ nghiêm ngặt các hướng dẫn và thông số được cung cấp.
