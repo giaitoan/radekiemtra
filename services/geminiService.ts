@@ -31,11 +31,11 @@ Mở đầu phần này BẮT BUỘC phải có khối tiêu đề chuẩn. Kh�
       \`\`\`text
             ${data.schoolName
     ? data.schoolName
-    : data.schoolLevel === 'Tiểu học'
-        ? 'TRƯỜNG TIỂU HỌC SƠN HẠ SỐ I'
+    : data.schoolLevel === 'THPT'
+        ? 'TRƯỜNG THPT SAO VÀNG'
         : data.schoolLevel === 'THCS'
-            ? 'TRƯỜNG THCS SƠN HẠ SỐ I'
-            : 'TRƯỜNG THPT SƠN HẠ SỐ I'}
+            ? 'TRƯỜNG THCS SAO KIM'
+            : 'TRƯỜNG TH SAO THỔ'}
       ĐỀ KIỂM TRA
       NĂM HỌC 2025-2026
       MÔN: ${data.subject}
@@ -131,11 +131,11 @@ Bây giờ, hãy tạo ra bộ đề kiểm tra hoàn chỉnh, tuân thủ nghi�
 const createEnglishPrompt = (data: ExamFormData): string => {
     const schoolHeader = data.schoolName
         ? data.schoolName
-        : (data.schoolLevel === 'Tiểu học'
-            ? 'TRƯỜNG TIỂU HỌC SƠN HẠ SỐ I'
+        : (data.schoolLevel === 'THPT'
+            ? 'TRƯỜNG THPT SAO VÀNG'
             : data.schoolLevel === 'THCS'
-                ? 'TRƯỜNG THCS SƠN HẠ SỐ I'
-                : 'TRƯỜNG THPT SƠN HẠ SỐ I');
+                ? 'TRƯỜNG THCS SAO KHUÊ'
+                : 'TRƯỜNG TH SAO KIM');
     return `
 You are an expert, a teacher of English teaching for primary, middle and high schools. Your task is to create a complete, high-quality set of English test questions for Vietnamese students based on user requests.
 **CRITICAL INSTRUCTIONS:**
@@ -210,7 +210,7 @@ const createLiteraturePrompt = (data: ExamFormData): string => {
 Bạn là một chuyên gia giàu kinh nghiệm trong việc biên soạn đề thi môn Ngữ văn cho học sinh Tiểu học, THCS và THPT tại Việt Nam. Nhiệm vụ của bạn là tạo ra một bộ đề kiểm tra hoàn chỉnh, khoa học, và bám sát chương trình giáo dục.
 
 **HƯỚNG DẪN TỐI THƯỢNG (BẮT BUỘC TUÂN THỦ):**
-1.  **Ngôn ngữ:** 100% nội dung và tiêu đề phải là tiếng Việt.
+1.  **Ngôn ngữ:** 100% nội dung và tiêu đề phải là tiếng Việt.Công thức toán định dạng LaTex (trong dấu $...$)
 2.  **Cấu trúc 4 phần:** Phải tuân thủ nghiêm ngặt cấu trúc 4 phần với tiêu đề chính xác. Dùng '---' để ngăn cách các phần.
     - PHẦN 1: MA TRẬN ĐỀ KIỂM TRA
     - ---
