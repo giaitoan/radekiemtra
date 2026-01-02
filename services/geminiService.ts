@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import type { ExamFormData } from '../types';
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const apiKey = import.meta.env.API_KEY;
 if (!apiKey) {
     throw new Error("API_KEY environment variable not set");
 }
