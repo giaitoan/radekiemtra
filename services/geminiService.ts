@@ -1,12 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import type { ExamFormData } from '../types';
-
-const apiKey = import.meta.env.API_KEY;
-if (!apiKey) {
-    throw new Error("API_KEY environment variable not set");
-}
-const ai = new GoogleGenAI({ apiKey });
-
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 const createGeneralPrompt = (data: ExamFormData): string => {
     return `
 Bạn là một trợ lý AI chuyên gia cho giáo viên tiểu học, THCS, THPT Việt Nam, có chuyên môn sâu về môn ${data.subject}. Nhiệm vụ của bạn là tạo ra một bộ đề kiểm tra hoàn chỉnh, chính xác và khoa học, tuân thủ nghiêm ngặt các hướng dẫn và thông số được cung cấp.
