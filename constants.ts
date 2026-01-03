@@ -20,7 +20,7 @@ export const DEFAULT_CONFIG: ExamConfig = {
   matrixNotes: 'Tỷ lệ nhận biết 40%, thông hiểu 30%, vận dụng 30%. Công thức toán in ấn chuẩn.'
 };
 
-export const AUTHOR_INFO = "Lê Hoà Hiệp (0983.676.470)";
+export const AUTHOR_INFO = "Giải Toán";
 
 // SVG Icons as constants
 export const ICONS = {
