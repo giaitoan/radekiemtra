@@ -9,11 +9,11 @@ const Header: React.FC = () => {
           {/* Creative Logo LHH */}
           <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-inner border-2 border-blue-300">
             <span className="text-primary font-black text-xl tracking-tighter" style={{ fontFamily: 'Arial, sans-serif' }}>
-              LHH
+              GT
             </span>
           </div>
           <div>
-            <h1 className="text-lg md:text-xl font-bold leading-tight uppercase">ỨNG DỤNG RA ĐỀ KIỂM TRA - Ver 2.0</h1>
+            <h1 className="text-lg md:text-xl font-bold leading-tight uppercase">RA ĐỀ KIỂM TRA</h1>
             <p className="text-xs text-blue-200 opacity-90">Tự động hoá - Chuẩn sư phạm</p>
           </div>
         </div>
